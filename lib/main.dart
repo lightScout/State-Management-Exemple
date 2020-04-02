@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  final String data = 'Data';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Level1(),
+    return Provider<String>(
+      create: (context) => data,
+      child: MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text(data),
+          ),
+          body: Level1(),
+        ),
+      ),
     );
   }
 }
@@ -34,7 +43,7 @@ class Level3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Needs Data'),
+      child: Text(Provider.of(context)),
     );
   }
 }
