@@ -11,6 +11,6 @@ which allows for the rest of the three to see data and react to changes coming f
 
 It is a simply project, easy enough to understand what is going on and to play around with.
 
-    More details through the code.
+    More details throughout the code.
 
 
